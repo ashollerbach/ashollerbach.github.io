@@ -19,6 +19,10 @@
   .sidebar h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    text-align: center; /* Center the "My Projects" header */
+    color: white; /* Ensure visibility against dark background */
+    font-weight: bold; /* Emphasize the header */
+    display: block; /* Ensure it’s rendered */
   }
   
   .sidebar ul {
@@ -46,8 +50,13 @@
     padding: 20px;
   }
   
+  .container h1 {
+    text-align: center; /* Center the "About Me" header */
+    font-size: 2.5rem; /* Larger font size */
+  }
+  
   .headshot {
-    width: 400px; /* Matches your size */
+    width: 400px;
     height: 600px;
     border-radius: 10px;
     margin: 10px auto;
@@ -71,7 +80,7 @@
     margin: 10px 0;
   }
   
-  h1, h2 {
+  h2 {
     color: #333;
   }
   
