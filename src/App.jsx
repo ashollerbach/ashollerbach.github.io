@@ -37,13 +37,21 @@ function Home() {
       <h1>About Me</h1>
       <img src="/images/headshot.jpg" alt="Headshot" className="headshot" />
       <p>
-        My name is Arik Hollerbach, I am a computer engineer at University graduating in May 2025.
+        My name is Arik Hollerbach, I am a computer engineer at Auburn University graduating in May 2025.
         I have a broad range of experience including ASIC design, firmware development, and computer vision training and implementation.
         After I graduate, I am excited to keep learning and working on projects on my own.
         Some of the topics I want to focus on are bayesian statistics, wireless communications, options trading, and hardware security.
         Outside of my classwork and personal projects I enjoy pickleball, hiking, fishing, surfing, and golfing.
         I am also a diehard Auburn and Notre Dame fan, and I enjoy watching my teams play football, baseball, and lacrosse.
       </p>
+      <div className="social-links">
+        <a href="https://github.com/ashollerbach" target="_blank" rel="noopener noreferrer">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" className="social-logo" />
+        </a>
+        <a href="https://linkedin.com/in/ashollerbach" target="_blank" rel="noopener noreferrer">
+          <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" className="social-logo" />
+        </a>
+      </div>
     </div>
   );
 }
@@ -62,7 +70,10 @@ function Capstone() {
       <video width="560" height="315" controls>
         <source src="/deathnote/ShowcaseFlight.mp4" type="video/mp4" />
       </video>
-      <figcaption>Video of the sentry tracking the drone</figcaption>
+      <video width="560" height="315" controls>
+        <source src="/deathnote/SentryTracking.mp4" type="video/mp4" />
+      </video>
+      <figcaption>Videos of the sentry tracking the drone</figcaption>
     </div>
   );
 }
