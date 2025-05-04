@@ -1,5 +1,68 @@
-.container { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
-.headshot { max-width: 200px; border-radius: 50%; }
-.project { margin: 20px; }
-.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-img { max-width: 100%; height: auto; }
+.app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    order: 1; /* Places sidebar on the right */
+  }
+  
+  .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .headshot {
+    width: 400px; /* Reduced size */
+    height: 600px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .project-image {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+  }
