@@ -8,19 +8,7 @@
 </head>
 <body>
     <div class="app-container">
-        <nav class="sidebar">
-            <h2>My Projects</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="capstone.html">Capstone</a></li>
-                <li><a href="wordle.html">Wordle</a></li>
-                <li><a href="aes.html">AES</a></li>
-                <li><a href="starfall.html">Starfall</a></li>
-                <li><a href="eagle-scout.html">Eagle Scout</a></li>
-            </ul>
-        </nav>
-
-        <main class="main-content">
+        <div id="sidebar-placeholder"></div> <main class="main-content">
             <div class="container">
                 <h2>Drone Defense Sentry</h2>
                 <p>
@@ -36,14 +24,14 @@
                 <figcaption style="text-align: center; display: block; margin-bottom: 20px;">Group picture at our senior design showcase.</figcaption>
                 
                 <video controls 
-                       style="display: block; width: 90%; max-width: 680px; /* Smaller max-width */ height: auto; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 5px;">
+                       style="display: block; width: 90%; max-width: 680px; height: auto; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 5px;">
                     <source src="deathnote/ShowcaseFlight.mp4" type="video/mp4" />
                     Your browser does not support the video tag or the file could not be loaded.
                 </video>
                 <figcaption style="text-align: center; display: block; margin-bottom: 20px;">Showcase flight video</figcaption>
                 
                 <video controls 
-                       style="display: block; width: 90%; max-width: 1000px; /* Larger max-width */ height: auto; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 5px;">
+                       style="display: block; width: 90%; max-width: 1000px; height: auto; margin-left: auto; margin-right: auto; margin-top: 15px; margin-bottom: 5px;">
                     <source src="deathnote/SentryTracking.mp4" type="video/mp4" />
                     Your browser does not support the video tag or the file could not be loaded.
                 </video>
@@ -51,5 +39,22 @@
             </div>
         </main>
     </div>
+
+    <script>
+        fetch('_sidebar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('sidebar-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+                document.getElementById('sidebar-placeholder').innerHTML = '<p style="color:red; padding: 20px;">Error loading navigation.</p>';
+            });
+    </script>
 </body>
 </html>
