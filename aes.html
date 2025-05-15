@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arik Hollerbach - AES Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <h2>My Projects</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="capstone.html">Capstone</a></li>
+                <li><a href="wordle.html">Wordle</a></li>
+                <li><a href="aes.html">AES</a></li>
+                <li><a href="starfall.html">Starfall</a></li>
+                <li><a href="eagle-scout.html">Eagle Scout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="container">
+                <h2>AES</h2>
+                <p>This project was one of my projects for Hardware Security 1 & 2 (ELEC 5210 & ELEC 5290).
+                    It uses combinational logic to implement AES on an FPGA
+                    and uses UART to communicate with a PC.
+                    After implementing the AES algorithm in ECB mode, I was able to
+                    revise my implementation to encrypt in CTR mode. 
+                    In CTR mode the system encrypts a counter concatenated with a nonce and then XOR's
+                    that output with the plaintext. This helps significantly reduce the amount of computer
+                    hardware required to implement AES. Because AES is a very expensive algorithm, 
+                    implementing it in hardware can significantly reduce its power consumption - 
+                    especially for large amounts of data.
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
