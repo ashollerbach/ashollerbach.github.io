@@ -2,7 +2,7 @@
   "name": "website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://gitname.github.io/react-gh-pages",
+  "homepage": "https://ashollerbach.github.io",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
